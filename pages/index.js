@@ -1,3 +1,5 @@
+import Layout from "../modules/layout";
+
 export default function Home() {
-  return <div>Changed Home</div>
+  return <Layout>Changed Home</Layout>
 }
