@@ -6,6 +6,7 @@ export default function SignupButton() {
       color="primary"
       fontSize="20px"
       fontWeight="extrabold"
+      display={['none', 'block']}
       _hover={{ textDecoration: 'none' }}
     >
       Sign up

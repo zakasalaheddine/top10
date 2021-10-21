@@ -4,9 +4,9 @@ import { Box } from '@chakra-ui/layout'
 import styled from '@emotion/styled'
 import { FiSearch } from 'react-icons/fi'
 
-export default function SearchBar() {
-  return (
-    <SearchBarContainer>
+export default function SearchBar({ showing = true }) {
+  return showing ? (
+    <SearchBarContainer w={['100%', '455px']}>
       <input placeholder="Search..." />
       <PrimarySearchButton
         aria-label="Search"
@@ -14,6 +14,8 @@ export default function SearchBar() {
         bgColor="primary"
       />
     </SearchBarContainer>
+  ) : (
+    <></>
   )
 }
 
@@ -22,7 +24,6 @@ const SearchBarContainer = styled(Box)`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 455px;
   padding: 5px;
   border-radius: 15px;
   input {
