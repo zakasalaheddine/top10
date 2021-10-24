@@ -1,5 +1,6 @@
 import { Box } from "@chakra-ui/layout";
 import Layout from "../modules/layout";
+import Items from "../modules/layout/components/Post Items/Items";
 import PostHeader from "../modules/layout/components/PostHeader/PostHeader";
 import Services from "../modules/layout/components/Service Component/Services";
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       >
         <PostHeader />
         <Services />
+        <Items />
       </Box>
     </Layout>
   );
