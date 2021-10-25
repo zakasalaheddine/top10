@@ -2,6 +2,7 @@ import { Box, Text } from "@chakra-ui/layout";
 import styled from "@emotion/styled";
 import React from "react";
 import ItemHeader from "./ItemHeader";
+import ItemImage from "./ItemImage";
 
 const Items = () => {
   return (
@@ -10,6 +11,7 @@ const Items = () => {
         A Closer Look At The Top 10 Meal Delivery Services
       </Title>
       <ItemHeader />
+      <ItemImage />
     </Box>
   );
 };
