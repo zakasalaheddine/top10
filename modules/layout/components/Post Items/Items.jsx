@@ -2,6 +2,7 @@ import { Box, Text } from "@chakra-ui/layout";
 import styled from "@emotion/styled";
 import React from "react";
 import ItemDescription from "./ItemDescription";
+import ItemFooter from "./ItemFooter";
 import ItemHeader from "./ItemHeader";
 import ItemImage from "./ItemImage";
 
@@ -14,6 +15,7 @@ const Items = () => {
       <ItemHeader />
       <ItemImage />
       <ItemDescription />
+      <ItemFooter />
     </Box>
   );
 };
