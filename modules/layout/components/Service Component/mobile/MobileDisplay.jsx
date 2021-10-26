@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import { AspectRatio, Box, Flex, Text } from "@chakra-ui/layout";
 import { FaStar } from "react-icons/fa";
 import { Image } from "@chakra-ui/image";
+import CustomButton from "../../UI/Button";
 
 const MobileDisplay = () => {
   return (
@@ -39,7 +40,7 @@ const MobileDisplay = () => {
           </RowsContainer>
         </Box>
       </ServiceContainer>
-      <Button>Visit</Button>
+      <CustomButton w="100%">Visit</CustomButton>
     </Box>
   );
 };
@@ -66,14 +67,4 @@ const RowsContainer = styled(Flex)`
   & > p:first-of-type {
     font-weight: bold;
   }
-`;
-const Button = styled.button`
-  width: 100%;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 15px;
-  background-color: #01036a;
-  color: #fff;
-  padding: 10px 0;
 `;
