@@ -4,6 +4,7 @@ import { BsCheck2 } from "react-icons/bs";
 import { MdOutlineClose } from "react-icons/md";
 import TextIcon from "./TextIcon";
 import styled from "@emotion/styled";
+import CustomButton from "../UI/Button";
 
 const ItemDescription = () => {
   return (
@@ -56,6 +57,11 @@ const ItemDescription = () => {
           </Box>
         </Box>
       </ConsProsContainer>
+      <Box display={["block", "none"]}>
+        <CustomButton w="100%" bgColor="primary">
+          View Plan
+        </CustomButton>
+      </Box>
     </>
   );
 };

@@ -4,7 +4,7 @@ import { Button } from "@chakra-ui/button";
 import { Box } from "@chakra-ui/layout";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
 
-const CustomButton = ({ children, bgColor }) => {
+const CustomButton = ({ children, bgColor, w }) => {
   const [displayIcon, setDisplayIcon] = useState(false);
   const handleIconDisplay = () => {
     setDisplayIcon((prevState) => !prevState);
@@ -14,6 +14,7 @@ const CustomButton = ({ children, bgColor }) => {
       onMouseEnter={handleIconDisplay}
       onMouseLeave={handleIconDisplay}
       bgColor={bgColor}
+      w={w}
     >
       {children}
       {displayIcon && (
@@ -34,7 +35,7 @@ const Btn = styled(Button)`
   color: #fff;
   border-radius: 8px;
   padding: 22px 0;
-  width: 163px;
+  width: ${({ w }) => w || "163px"};
   background-color: ${({ bgColor }) => bgColor || "#01036a"};
   transition: padding 0.5s;
   position: relative;
@@ -44,7 +45,7 @@ const Btn = styled(Button)`
   }
   @media (max-width: 500px) {
     font-size: 16px;
-    width: 140px;
+    width: ${({ w }) => w || "140px"};
   }
 `;
 
