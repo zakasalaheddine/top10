@@ -3,6 +3,7 @@ import Layout from "../modules/layout";
 import Items from "../modules/layout/components/Post Items/Items";
 import PostHeader from "../modules/layout/components/PostHeader/PostHeader";
 import Services from "../modules/layout/components/Service Component/Services";
+import Footer from "../modules/layout/components/Footer/Footer";
 export default function Home() {
   return (
     <Layout>
@@ -13,6 +14,7 @@ export default function Home() {
         <Services />
         <Items />
       </Box>
+      <Footer />
     </Layout>
   );
 }
