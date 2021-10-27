@@ -1,15 +1,17 @@
-import { Box } from '@chakra-ui/layout'
-import styled from '@emotion/styled'
-import Navbar from './components/navbar'
+import { Box } from "@chakra-ui/layout";
+import styled from "@emotion/styled";
+import Navbar from "./components/navbar";
+import Footer from "./components/Footer/Footer";
 
 export default function Layout({ children }) {
   return (
     <LayoutContainer>
       <Navbar />
       <ContentContainer as="main">{children}</ContentContainer>
+      <Footer />
     </LayoutContainer>
-  )
+  );
 }
 
-const LayoutContainer = styled(Box)``
-const ContentContainer = styled(Box)``
+const LayoutContainer = styled(Box)``;
+const ContentContainer = styled(Box)``;
