@@ -2,6 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import { Box, Text } from "@chakra-ui/layout";
 import CategorieListDesktop from "./CategorieListDesktop";
+import CategorieListMobile from "./CategorieListMobile";
 const Footer = () => {
   return (
     <FooterContainer
@@ -12,6 +13,7 @@ const Footer = () => {
         Explore Our Categories
       </Title>
       <CategorieListDesktop />
+      <CategorieListMobile />
     </FooterContainer>
   );
 };
