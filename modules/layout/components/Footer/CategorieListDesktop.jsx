@@ -31,13 +31,45 @@ export const CategorieContainer = styled(Center)`
   background-color: ${({ bgColor }) => bgColor || "#fff"};
 `;
 
-const Categories = [
-  { icon: "/images/Rectangle51.jpg", name: "live styled" },
-  { icon: "/images/Rectangle51.jpg", name: "live styled" },
-  { icon: "/images/Rectangle51.jpg", name: "live styled" },
-  { icon: "/images/Rectangle51.jpg", name: "live styled" },
-  { icon: "/images/Rectangle51.jpg", name: "live styled" },
-  { icon: "/images/Rectangle51.jpg", name: "live styled" },
-  { icon: "/images/Rectangle51.jpg", name: "live styled" },
-  { icon: "/images/Rectangle51.jpg", name: "live styled" },
+export const Categories = [
+  {
+    icon: "/images/Rectangle51.jpg",
+    name: "live styled",
+    description: "lorem lorem lorem lorem lorem",
+  },
+  {
+    icon: "/images/Rectangle51.jpg",
+    name: "live styled",
+    description: "lorem lorem lorem lorem lorem",
+  },
+  {
+    icon: "/images/Rectangle51.jpg",
+    name: "live styled",
+    description: "lorem lorem lorem lorem lorem",
+  },
+  {
+    icon: "/images/Rectangle51.jpg",
+    name: "live styled",
+    description: "lorem lorem lorem lorem lorem",
+  },
+  {
+    icon: "/images/Rectangle51.jpg",
+    name: "live styled",
+    description: "lorem lorem lorem lorem lorem",
+  },
+  {
+    icon: "/images/Rectangle51.jpg",
+    name: "live styled",
+    description: "lorem lorem lorem lorem lorem",
+  },
+  {
+    icon: "/images/Rectangle51.jpg",
+    name: "live styled",
+    description: "lorem lorem lorem lorem lorem",
+  },
+  {
+    icon: "/images/Rectangle51.jpg",
+    name: "live styled",
+    description: "lorem lorem lorem lorem lorem",
+  },
 ];
