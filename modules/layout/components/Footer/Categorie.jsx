@@ -7,7 +7,7 @@ const Categorie = ({ categorie }) => {
   return (
     <Link to={`/${categorie.slug}`}>
       <CategorieContainer>
-        <Logo src={categorie.icon} />
+        <Logo src={`${`https://api-top10.zakadev.com`}${categorie.icon.url}`} />
         <CategorieText>{categorie.name}</CategorieText>
       </CategorieContainer>
     </Link>
