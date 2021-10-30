@@ -1,16 +1,15 @@
 import React from "react";
 import { Box, Text } from "@chakra-ui/layout";
-import { Categories } from "./CategorieListDesktop";
 import Item from "../Item/Item";
 
-const CategorieListMobile = () => {
+const CategorieListMobile = ({ categories }) => {
   return (
     <Box display={["block", "block", "none"]}>
-      {Categories.map((categorie, i) => (
+      {categories.map((categorie, i) => (
         <Item
           key={i}
           itemType="categorie"
-          icon={categorie.icon}
+          icon={categorie.icon.url}
           title={categorie.name}
         >
           <Text>{categorie.description}</Text>

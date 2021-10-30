@@ -2,8 +2,8 @@ import React from "react";
 import styled from "@emotion/styled";
 import { Center, HStack, Text } from "@chakra-ui/layout";
 import Categorie from "./Categorie";
-
-const CategorieList = () => {
+const CategorieList = ({ categories }) => {
+  console.log(categories);
   return (
     <CategoriesContainer spacing={5} display={["none", "none", "flex"]}>
       <CategorieContainer w="64px" bgColor="primary">
@@ -11,7 +11,7 @@ const CategorieList = () => {
           All
         </Text>
       </CategorieContainer>
-      {Categories.map((categorie, i) => (
+      {categories.map((categorie, i) => (
         <Categorie key={i} categorie={categorie} />
       ))}
     </CategoriesContainer>
@@ -30,46 +30,3 @@ export const CategorieContainer = styled(Center)`
   width: ${({ w }) => w || "150px"};
   background-color: ${({ bgColor }) => bgColor || "#fff"};
 `;
-
-export const Categories = [
-  {
-    icon: "/images/Rectangle51.jpg",
-    name: "live styled",
-    description: "lorem lorem lorem lorem lorem",
-  },
-  {
-    icon: "/images/Rectangle51.jpg",
-    name: "live styled",
-    description: "lorem lorem lorem lorem lorem",
-  },
-  {
-    icon: "/images/Rectangle51.jpg",
-    name: "live styled",
-    description: "lorem lorem lorem lorem lorem",
-  },
-  {
-    icon: "/images/Rectangle51.jpg",
-    name: "live styled",
-    description: "lorem lorem lorem lorem lorem",
-  },
-  {
-    icon: "/images/Rectangle51.jpg",
-    name: "live styled",
-    description: "lorem lorem lorem lorem lorem",
-  },
-  {
-    icon: "/images/Rectangle51.jpg",
-    name: "live styled",
-    description: "lorem lorem lorem lorem lorem",
-  },
-  {
-    icon: "/images/Rectangle51.jpg",
-    name: "live styled",
-    description: "lorem lorem lorem lorem lorem",
-  },
-  {
-    icon: "/images/Rectangle51.jpg",
-    name: "live styled",
-    description: "lorem lorem lorem lorem lorem",
-  },
-];

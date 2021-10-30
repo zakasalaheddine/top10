@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import { Box, Text } from "@chakra-ui/layout";
 import CategorieListDesktop from "./CategorieListDesktop";
 import CategorieListMobile from "./CategorieListMobile";
-const Footer = () => {
+const Footer = ({ categories }) => {
   return (
     <FooterContainer
       as="footer"
@@ -12,8 +12,8 @@ const Footer = () => {
       <Title as="h1" fontSize={["lg", "xl", "3xl"]}>
         Explore Our Categories
       </Title>
-      <CategorieListDesktop />
-      <CategorieListMobile />
+      <CategorieListDesktop categories={categories} />
+      <CategorieListMobile categories={categories} />
     </FooterContainer>
   );
 };

@@ -13,7 +13,9 @@ const Item = ({ itemType, icon, title, children }) => {
         <Flex align="center">
           <CircleContainer bgColor="#fff">
             {itemType === "post" && <Text>{icon}</Text>}
-            {itemType === "categorie" && <Image src={icon} />}
+            {itemType === "categorie" && (
+              <Image src={`${`https://api-top10.zakadev.com`}${icon}`} />
+            )}
           </CircleContainer>
           <Title as="h1" fontSize={["lg", "xl", "2xl"]}>
             {title}
