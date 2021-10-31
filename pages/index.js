@@ -1,6 +1,9 @@
+import { Box } from "@chakra-ui/layout";
 import { useRouter } from "next/dist/client/router";
 import Layout from "../modules/layout";
 import HeaderImg from "../modules/layout/components/pages/home/HeaderImg";
+import CategorieList from "../modules/layout/components/pages/home/Categories/CategorieList";
+
 export default function Home({ categories }) {
   const router = useRouter();
   if (router.isFallback) {
@@ -9,6 +12,9 @@ export default function Home({ categories }) {
   return (
     <Layout categories={categories}>
       <HeaderImg />
+      <Box px={["16px", "30px", "45px", "100px", "140px"]} py="50px">
+        <CategorieList categories={categories} />
+      </Box>
     </Layout>
   );
 }
