@@ -1,5 +1,6 @@
 import { useRouter } from "next/dist/client/router";
 import Layout from "../modules/layout";
+import HeaderImg from "../modules/layout/components/pages/home/HeaderImg";
 export default function Home({ categories }) {
   const router = useRouter();
   if (router.isFallback) {
@@ -7,7 +8,7 @@ export default function Home({ categories }) {
   }
   return (
     <Layout categories={categories}>
-      <h1>Home Page</h1>
+      <HeaderImg />
     </Layout>
   );
 }
