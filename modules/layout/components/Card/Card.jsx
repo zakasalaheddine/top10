@@ -8,20 +8,26 @@ import { BiChevronDown, BiChevronUp } from "react-icons/bi";
 const Item = ({ itemType, icon, title, children }) => {
   const { isOpen, onToggle } = useDisclosure();
   return (
-    <ItemContainer my={["12px", "18px", "24px"]} px={["10px", "26px"]}>
+    <ItemContainer my={["12px", "18px", "24px"]} px={["10px", "24px"]}>
       <HeaderContainer h={["48px", "75px", "97px"]}>
         <Flex align="center">
-          <CircleContainer bgColor="#fff">
+          <CircleContainer
+            bgColor={itemType === "categorie" ? "#fff" : "#01036a"}
+          >
             {itemType === "post" && <Text>{icon}</Text>}
             {itemType === "categorie" && (
               <Image src={`${`https://api-top10.zakadev.com`}${icon}`} />
             )}
           </CircleContainer>
-          <Title as="h1" fontSize={["lg", "xl", "2xl"]}>
+          <Title as="h1" fontSize={["sm", "lg", "xl"]}>
             {title}
           </Title>
         </Flex>
-        <CircleContainer as="button" bgColor="primary" onClick={onToggle}>
+        <CircleContainer
+          as="button"
+          bgColor={itemType === "categorie" ? "primary" : "#01036a"}
+          onClick={onToggle}
+        >
           {!isOpen && <BiChevronUp size="32px" color="#fff" />}
           {isOpen && <BiChevronDown size="32px" color="#fff" />}
         </CircleContainer>
@@ -37,7 +43,7 @@ export default Item;
 
 //styled components
 export const ItemContainer = styled(Box)`
-  background-color: #e9e9e9;
+  background-color: #f2f2f2;
   border: 1px solid rgba(196, 196, 196, 0.5);
   border-radius: 15px;
   width: 100%;
@@ -48,11 +54,10 @@ export const HeaderContainer = styled(Flex)`
 `;
 export const CircleContainer = styled(Circle)`
   color: #fff;
-  background-color: ${({ bgColor }) => bgColor || "#01036a"};
-  width: 50px;
-  height: 50px;
+  width: 46px;
+  height: 46px;
   & p {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: bold;
     color: #fff;
   }
@@ -61,15 +66,15 @@ export const CircleContainer = styled(Circle)`
     height: 72%;
   }
   @media (max-width: 48em) {
-    width: 42px;
-    height: 42px;
+    width: 38px;
+    height: 38px;
     & p {
       font-size: 18px;
     }
   }
   @media (max-width: 30em) {
-    width: 30px;
-    height: 30px;
+    width: 26px;
+    height: 26px;
     & p {
       font-size: 16px;
     }
