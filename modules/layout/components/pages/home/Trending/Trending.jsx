@@ -1,13 +1,13 @@
 import styled from "@emotion/styled";
 import { Box, Flex, Grid, Link } from "@chakra-ui/layout";
 import { Image } from "@chakra-ui/react";
-import Item from "../../../Item/Item";
+import Card from "../../../Card/Card";
 import Post from "./Post";
 import PostAuther from "./PostAuther";
 
 const Trending = ({ trending, trendingNumber }) => {
   return (
-    <Item icon={trendingNumber} itemType="post" title={trending.title}>
+    <Card icon={trendingNumber} itemType="post" title={trending.title}>
       <DetailsContainer>
         <TopPart flexDir={["column", "column", "row"]}>
           <Img
@@ -35,7 +35,7 @@ const Trending = ({ trending, trendingNumber }) => {
           })}
         </BottomPart>
       </DetailsContainer>
-    </Item>
+    </Card>
   );
 };
 
