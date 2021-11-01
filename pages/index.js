@@ -3,6 +3,7 @@ import { useRouter } from "next/dist/client/router";
 import Layout from "../modules/layout";
 import HeaderImg from "../modules/layout/components/pages/home/HeaderImg";
 import CategorieList from "../modules/layout/components/pages/home/Categories/CategorieList";
+import TrendingList from "../modules/layout/components/pages/home/Trending/TrendingList";
 
 export default function Home({ categories }) {
   const router = useRouter();
@@ -14,6 +15,7 @@ export default function Home({ categories }) {
       <HeaderImg />
       <Box px={["16px", "30px", "45px", "100px", "140px"]} py="50px">
         <CategorieList categories={categories} />
+        <TrendingList />
       </Box>
     </Layout>
   );
