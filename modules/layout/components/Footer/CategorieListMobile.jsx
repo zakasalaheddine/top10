@@ -1,19 +1,19 @@
 import React from "react";
 import { Box, Text } from "@chakra-ui/layout";
-import Item from "../Item/Item";
+import Card from "../Card/Card";
 
 const CategorieListMobile = ({ categories }) => {
   return (
     <Box display={["block", "block", "none"]}>
       {categories.map((categorie, i) => (
-        <Item
+        <Card
           key={i}
           itemType="categorie"
           icon={categorie.icon.url}
           title={categorie.name}
         >
           <Text>{categorie.description}</Text>
-        </Item>
+        </Card>
       ))}
     </Box>
   );
