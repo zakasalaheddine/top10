@@ -1,0 +1,25 @@
+.slick-track {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+.slides {
+  position: relative;
+  width: calc(100% - 64px - 10px);
+}
+.slides .slick-prev,
+.slides .slick-next {
+  position: absolute;
+  top: 35%;
+  z-index: 1;
+  color: tomato;
+  cursor: pointer;
+}
+
+.slides .slick-prev {
+  left: -104px;
+}
+
+.slides .slick-next {
+  right: -28px;
+}
