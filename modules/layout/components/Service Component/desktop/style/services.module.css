@@ -1,0 +1,22 @@
+.slides {
+  width: 79%;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.slides .slick-prev,
+.slides .slick-next {
+  position: absolute;
+  top: 35%;
+  z-index: 1;
+  color: tomato;
+  cursor: pointer;
+}
+
+.slides .slick-prev {
+  left: -60px;
+}
+
+.slides .slick-next {
+  right: -28px;
+}
