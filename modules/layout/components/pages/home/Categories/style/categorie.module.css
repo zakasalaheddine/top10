@@ -1,0 +1,34 @@
+.slides {
+  position: relative;
+  width: 100%;
+}
+.slides .slick-prev,
+.slides .slick-next {
+  position: absolute;
+  top: 35%;
+  z-index: 1;
+  color: tomato;
+  cursor: pointer;
+  width: 32px;
+}
+.slides .slick-prev {
+  left: -38px;
+}
+
+.slides .slick-next {
+  right: -34px;
+}
+
+@media screen and (max-width: 900px) {
+  .slides .slick-prev,
+  .slides .slick-next {
+    width: 24px;
+    top: 42%;
+  }
+  .slides .slick-prev {
+    left: -28px;
+  }
+  .slides .slick-next {
+    right: -24px;
+  }
+}
