@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import styled from "@emotion/styled";
-import { Button } from "@chakra-ui/button";
-import { Box } from "@chakra-ui/layout";
+import { Box, Link } from "@chakra-ui/layout";
 import { BsFillArrowRightCircleFill } from "react-icons/bs";
 
-const CustomButton = ({ children, bgColor, w }) => {
+const CustomButton = ({ children, bgColor, w, href }) => {
   const [displayIcon, setDisplayIcon] = useState(false);
   const handleIconDisplay = () => {
     setDisplayIcon((prevState) => !prevState);
@@ -15,6 +14,7 @@ const CustomButton = ({ children, bgColor, w }) => {
       onMouseLeave={handleIconDisplay}
       bgColor={bgColor}
       w={w}
+      href={href}
     >
       {children}
       {displayIcon && (
@@ -28,18 +28,21 @@ const CustomButton = ({ children, bgColor, w }) => {
 
 export default CustomButton;
 
-const Btn = styled(Button)`
+const Btn = styled(Link)`
+  display: block;
+  text-align: center;
   font-size: 18px;
   font-weight: bold;
   line-height: 26px;
   color: #fff;
   border-radius: 8px;
-  padding: 22px 0;
+  padding: 8px 0;
   width: ${({ w }) => w || "163px"};
   background-color: ${({ bgColor }) => bgColor || "#01036a"};
   transition: padding 0.5s;
   position: relative;
   &:hover {
+    text-decoration: none;
     padding-right: 25px;
     background-color: ${({ bgColor }) => (bgColor ? "#FF5428" : "#01036a")};
   }

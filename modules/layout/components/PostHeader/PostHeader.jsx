@@ -4,14 +4,14 @@ import { AspectRatio, Box, Flex, Text } from "@chakra-ui/layout";
 import { Image } from "@chakra-ui/image";
 import Author from "./Author";
 
-const PostHeader = () => {
+const PostHeader = ({ title }) => {
   return (
     <PostContainer
       flexDir={["column-reverse", "column-reverse", "column-reverse", "row"]}
     >
       <Box mr={["0", "0", "0", "4%"]} w={["100%", "100%", "100%", "45%"]}>
         <Text fontWeight="bold" fontSize={["lg", "2xl", "4xl"]}>
-          10 Best Meal Kit Delivery Services for No-Hassle Healthy Meals at Home
+          {title}
         </Text>
         <Author />
       </Box>

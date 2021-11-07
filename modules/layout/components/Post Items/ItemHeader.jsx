@@ -2,7 +2,7 @@ import { AspectRatio, Box, Center, Flex, Text } from "@chakra-ui/layout";
 import { Image as ChakraImage } from "@chakra-ui/react";
 import styled from "@emotion/styled";
 
-const ItemHeader = () => {
+const ItemHeader = ({ id, logo, name }) => {
   return (
     <HeaderContainer
       m={["4px 0", "10px 0", "18px 0"]}
@@ -10,15 +10,15 @@ const ItemHeader = () => {
     >
       <LeftPart w={["58%", "60%", "50%"]}>
         <NumberContainer display={["none", "flex"]}>
-          <P fontSize={["0", "3xl", "6xl"]}>1</P>
+          <P fontSize={["0", "3xl", "6xl"]}>{id}</P>
           <VerticalLine />
         </NumberContainer>
         <LogoTitleContainer>
           <AspectRatio w={["86px", "86px", "130px"]} ratio={16 / 6} mr={1}>
-            <ChakraImage src="/images/ItemLogo.png" />
+            <ChakraImage src={`https://api-top10.zakadev.com${logo}`} />
           </AspectRatio>
           <P as="h1" fontSize={["sm", "lg", "2xl", "3xl"]}>
-            HelloFresh
+            {name}
           </P>
         </LogoTitleContainer>
       </LeftPart>

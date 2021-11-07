@@ -4,43 +4,52 @@ import { FaStar } from "react-icons/fa";
 import { Image } from "@chakra-ui/image";
 import CustomButton from "../../UI/Button";
 
-const MobileDisplay = () => {
+const MobileDisplay = ({ topics }) => {
   return (
     <Box w="100%" display={["block", "block", "none"]}>
       <Text fontSize="lg" fontWeight="extrabold" as="h1">
         The Best service Providers
       </Text>
-      {/* here we will loop over the service array */}
-      <ServiceContainer>
-        <ImageContainer ratio={3 / 4}>
-          <Image src="/images/Rectangle51.jpg" />
-        </ImageContainer>
-        <Box w="100%">
-          <Text fontSize="md" fontWeight="bold" mb={4}>
-            Service Provider
-          </Text>
-          <RowsContainer>
-            <Text>Rating</Text>
-            <Flex align="center">
-              <Text mr={1}>4.5</Text>
-              <FaStar color="#ffc107" size="18px" />
-            </Flex>
-          </RowsContainer>
-          <RowsContainer>
-            <Text>Expert score</Text>
-            <Text>4.5</Text>
-          </RowsContainer>
-          <RowsContainer>
-            <Text>Healthy</Text>
-            <Text>3.5</Text>
-          </RowsContainer>
-          <RowsContainer>
-            <Text>Calorie Ratio</Text>
-            <Text>3%</Text>
-          </RowsContainer>
-        </Box>
-      </ServiceContainer>
-      <CustomButton w="100%">Visit</CustomButton>
+      {topics.map((topic) => {
+        return (
+          <>
+            <ServiceContainer>
+              <ImageContainer ratio={3 / 4}>
+                <Image
+                  src={`https://api-top10.zakadev.com${topic.images[0].url}`}
+                />
+              </ImageContainer>
+              <Box w="100%">
+                <Text fontSize="md" fontWeight="bold" mb={4}>
+                  {topic.name}
+                </Text>
+                <RowsContainer>
+                  <Text>Rating</Text>
+                  <Flex align="center">
+                    <Text mr={1}>{topic.features[0].value}</Text>
+                    <FaStar color="#ffc107" size="18px" />
+                  </Flex>
+                </RowsContainer>
+                <RowsContainer>
+                  <Text>Expert score</Text>
+                  <Text>{topic.features[1].value}</Text>
+                </RowsContainer>
+                <RowsContainer>
+                  <Text>Healthy</Text>
+                  <Text>{topic.features[2].value}</Text>
+                </RowsContainer>
+                <RowsContainer>
+                  <Text>Calorie Ratio</Text>
+                  <Text>{topic.features[3].value}</Text>
+                </RowsContainer>
+              </Box>
+            </ServiceContainer>
+            <CustomButton href={topic.href} w="100%">
+              Visit
+            </CustomButton>
+          </>
+        );
+      })}
     </Box>
   );
 };

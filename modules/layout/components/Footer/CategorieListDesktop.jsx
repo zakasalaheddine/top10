@@ -5,7 +5,6 @@ import { Center, Flex, Text } from "@chakra-ui/layout";
 import Categorie from "./Categorie";
 import SliderSettings from "./SliderSettings";
 const CategorieList = ({ categories }) => {
-  console.log(categories);
   return (
     <Flex spacing={5} display={["none", "none", "flex"]}>
       <CategorieContainer w="64px" mr="10px" bgColor="primary">

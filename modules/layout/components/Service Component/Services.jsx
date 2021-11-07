@@ -1,11 +1,11 @@
 import DesktopDisplay from "./desktop/DesktopDisplay";
 import MobileDisplay from "./mobile/MobileDisplay";
 
-const Services = () => {
+const Services = ({ topics }) => {
   return (
     <>
-      <DesktopDisplay />
-      <MobileDisplay />
+      <DesktopDisplay topics={topics} />
+      <MobileDisplay topics={topics} />
     </>
   );
 };

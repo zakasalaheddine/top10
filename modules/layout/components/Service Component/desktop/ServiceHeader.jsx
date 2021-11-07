@@ -40,4 +40,6 @@ const P = styled(Text)`
 
 export const HR = styled.div`
   border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  position: absolute;
+  width: 100%;
 `;
