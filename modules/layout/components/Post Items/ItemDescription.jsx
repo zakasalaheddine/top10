@@ -6,7 +6,7 @@ import TextIcon from "./TextIcon";
 import styled from "@emotion/styled";
 import CustomButton from "../UI/Button";
 
-const ItemDescription = () => {
+const ItemDescription = ({ href, description, pros, cons }) => {
   return (
     <>
       <HR my="25px" w="50%" />
@@ -19,28 +19,15 @@ const ItemDescription = () => {
       <TextIcon icon={<BsCheck2 size="22px" />}>
         <Span>What’s in the box</Span> 3-5 mealsof 2 or 4 servings each
       </TextIcon>
-      <Description fontSize={["md", "lg"]}>
-        HelloFresh is one of the easiest and most convenient meal kit delivery
-        services. With straightforward recipes and pre-portioned ingredients,
-        all of its meals are done and dusted in 6 steps or less, allowing you to
-        sit down and enjoy your dinner within 30 minutes. What’s more is that
-        the convenience doesn’t end with the meals: HelloFresh’s website is
-        extremely user-friendly, and modifying, cancelling or reactivating a
-        subscription is as easy as pie. The diversity of meal plans may not be
-        as great as other meal kit delivery services but the quality, ease and
-        convenience of HelloFresh is second to none.
-      </Description>
+      <Description fontSize={["md", "lg"]}>{description}</Description>
       <ConsProsContainer flexDir={["column", "column", "row"]}>
         <Box mr={["", "", "4%"]} w={["100%", "100%", "50%"]}>
           <Title>Pros</Title>
           <HR w="80%" />
           <Box mt={4}>
-            <TextIcon icon={<BsCheck2 size="20px" />}>
-              3-5 mealsof 2 or 4 servings each
-            </TextIcon>
-            <TextIcon icon={<BsCheck2 size="20px" />}>
-              3-5 mealsof 2 or 4 servings each
-            </TextIcon>
+            {pros.map((prop) => (
+              <TextIcon icon={<BsCheck2 size="20px" />}>{prop.value} </TextIcon>
+            ))}
           </Box>
         </Box>
 
@@ -48,17 +35,16 @@ const ItemDescription = () => {
           <Title>Cons</Title>
           <HR w="80%" />
           <Box mt={4}>
-            <TextIcon icon={<MdOutlineClose size="20px" />}>
-              3-5 mealsof 2 or 4 servings each
-            </TextIcon>
-            <TextIcon icon={<MdOutlineClose size="20px" />}>
-              3-5 mealsof 2 or 4 servings each
-            </TextIcon>
+            {cons.map((con) => (
+              <TextIcon icon={<MdOutlineClose size="20px" />}>
+                {con.value}
+              </TextIcon>
+            ))}
           </Box>
         </Box>
       </ConsProsContainer>
       <Box display={["block", "none"]}>
-        <CustomButton w="100%" bgColor="primary">
+        <CustomButton href={href} w="100%" bgColor="primary">
           View Plan
         </CustomButton>
       </Box>

@@ -2,33 +2,32 @@ import React from "react";
 import styled from "@emotion/styled";
 import { Box, Flex, Text } from "@chakra-ui/layout";
 import { Image } from "@chakra-ui/image";
-import { HR } from "./ServiceHeader";
 import Rating from "../../Rating/Rating";
 import CustomButton from "../../UI/Button";
 
-const Service = () => {
+const Service = ({ imgUrl, features, name, href }) => {
   return (
     <div>
       <TopPartContainer>
-        <ServiceImage src="/images/Rectangle51.jpg" />
+        <ServiceImage src={`https://api-top10.zakadev.com${imgUrl}`} />
         <Text fontSize="2xl" mb="50px">
-          Service Provider
+          {name}
         </Text>
-        <CustomButton>Visit</CustomButton>
+        <CustomButton href={href}>Visit</CustomButton>
       </TopPartContainer>
 
       <BottomPartContainer>
         <RowsContainer>
-          <Rating nbrStar={3.5} size="26" />
+          <Rating nbrStar={features[0].value} size="26" />
         </RowsContainer>
         <RowsContainer>
-          <Text fontSize="22px">{4.5}</Text>
+          <Text fontSize="22px">{features[1].value}</Text>
         </RowsContainer>
         <RowsContainer>
-          <Text fontSize="22px">{3.5}</Text>
+          <Text fontSize="22px">{features[2].value}</Text>
         </RowsContainer>
         <RowsContainer>
-          <Text fontSize="22px">{`${3}%`}</Text>
+          <Text fontSize="22px">{features[3].value}</Text>
         </RowsContainer>
       </BottomPartContainer>
     </div>

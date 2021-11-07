@@ -5,11 +5,11 @@ import { Image } from "@chakra-ui/image";
 import { BsArrowRight } from "react-icons/bs";
 import CustomButton from "../UI/Button";
 
-const ItemImage = () => {
+const ItemImage = ({ image, href }) => {
   return (
     <>
       <ImageContainer ratio={16 / 9}>
-        <Image src="/images/Rectangle 63.png" />
+        <Image src={`https://api-top10.zakadev.com${image}`} />
       </ImageContainer>
       <LinksContainer>
         <Box>
@@ -26,7 +26,9 @@ const ItemImage = () => {
           </Link>
         </Box>
         <Box display={["none", "block"]}>
-          <CustomButton bgColor="primary">View Plan</CustomButton>
+          <CustomButton href={href} bgColor="primary">
+            View Plan
+          </CustomButton>
         </Box>
       </LinksContainer>
     </>

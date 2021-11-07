@@ -4,7 +4,7 @@ import { Image } from "@chakra-ui/image";
 import { AspectRatio, Flex } from "@chakra-ui/layout";
 import CustomButton from "../UI/Button";
 
-const ItemFooter = () => {
+const ItemFooter = ({ href }) => {
   return (
     <ItemFooterContainer
       p={["", "16px", "20px 30px"]}
@@ -13,7 +13,9 @@ const ItemFooter = () => {
       <AspectRatio w={["100px", "100px", "130px"]} ratio={16 / 6}>
         <Image src="/images/ItemLogo.png" />
       </AspectRatio>
-      <CustomButton bgColor="primary">View Plan</CustomButton>
+      <CustomButton href={href} bgColor="primary">
+        View Plan
+      </CustomButton>
     </ItemFooterContainer>
   );
 };
