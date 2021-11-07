@@ -7,7 +7,7 @@ import SliderSettings from "./SliderSettings";
 
 const DesktopDisplay = () => {
   return (
-    <Flex display={["none", "none", "flex"]}>
+    <Flex display={["none", "none", "flex"]} position="relative">
       <ServiceHeader />
       <Slider {...SliderSettings}>
         {[...Array(4)].map((service, i) => {

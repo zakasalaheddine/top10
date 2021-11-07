@@ -21,15 +21,12 @@ const Service = () => {
         <RowsContainer>
           <Rating nbrStar={3.5} size="26" />
         </RowsContainer>
-        <HR />
         <RowsContainer>
           <Text fontSize="22px">{4.5}</Text>
         </RowsContainer>
-        <HR />
         <RowsContainer>
           <Text fontSize="22px">{3.5}</Text>
         </RowsContainer>
-        <HR />
         <RowsContainer>
           <Text fontSize="22px">{`${3}%`}</Text>
         </RowsContainer>
